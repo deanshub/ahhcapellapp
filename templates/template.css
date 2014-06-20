@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+html, body {
+  font-family: 'Open Sans Hebrew', Arial;
+  margin: 0;
+}
+
+html {
+  background-image: url('bigchoir.jpg');
+  background-size: 100% 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.logo {
+  font-family: 'Open Sans Hebrew';
+  display: block;
+}
+
+.logo > .ha {
+  color: #ff4747;
+  font-weight: 400;
+}
+
+.logo > .loaa {
+}
+
+.logo > .exclamation {
+  color: #ff4747;
+  cont-weight: 100;
+}
+
+#nav-bar {
+  font-weight: 100;
+  font-size: 3em;
+  color: #f7f7f7;
+  display: flex;
+  width: 100%;
+}
+
+#nav-items, #nav-items > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-items {
+  flex: 1;
+  display: flex;
+  margin-left: .5em;
+}
+
+#nav-items > li > a, .logo {
+  display: block;
+  padding: 0.3em 0.5em;
+}
+
+#nav-items > li {
+  display: block;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+  text-align: right;
+  flex: 1;
+}
+
+#nav-bar .fa {
+  line-height: 1.5em !important;
+}
+
+#main-page {
+  flex: 1;
+  display: flex;
+}
+
+.center {
+  margin: auto;
+}
