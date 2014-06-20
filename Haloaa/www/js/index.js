@@ -17,22 +17,30 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        console.log('Received Event: ' + id);
-    }
+  // Application Constructor
+  initialize: function() {
+      this.bindEvents();
+  },
+  // Bind Event Listeners
+  //
+  // Bind any events that are required on startup. Common events are:
+  // 'load', 'deviceready', 'offline', and 'online'.
+  bindEvents: function() {
+      document.addEventListener('deviceready', this.onDeviceReady, false);
+      document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
+  },
+  // deviceready Event Handler
+  //
+  // The scope of 'this' is the event. In order to call the 'receivedEvent'
+  // function, we must explicitly call 'app.receivedEvent(...);'
+  onDeviceReady: function() {
+      console.log('Device is ready');
+  },
+  // Rec Button pressed eventHandler
+  //
+  // What happened when the button is pushed
+  onRecButtonClick: function() {
+    console.log('RecButton pressed.');
+    navigator.notification.alert('Red button pressed', function() {}, 'Button :O', 'OK');
+  }
 };
