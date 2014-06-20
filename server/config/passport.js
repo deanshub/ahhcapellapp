@@ -27,12 +27,12 @@ module.exports = function(app, passport, FacebookStrategy, Mongoose) {
   ));
 
   passport.serializeUser(function(user, done) {
-    done(null, user.id);
+    done(null, user._id);
   });
 
   passport.deserializeUser(function(id, done) {
     Mongoose.models.User.findById(id, function(err, user) {
-      done(err, user);
+      done(err, user.toJSON());
     });
   });
 
