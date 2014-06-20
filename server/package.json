@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/deanshub/haloaa",
   "dependencies": {
-    "express": "^4.4.3"
+    "express": "^4.4.3",
+    "simpleplan": "0.0.1"
   }
 }
