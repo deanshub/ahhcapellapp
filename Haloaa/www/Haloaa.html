@@ -14,13 +14,14 @@
   <nav id="nav-bar">
     <span id="logo" class="logo"><span class="ha">Ha</span><span class="loaa">loaa</span><span class="exclamation">!</span></span>
     <ul id="nav-items">
-      <li class="pull-right" id="songsButton"><a ng-href="{{ToggleSongsRef}}><i class="fa {{ButtonIcon}}"></i></a></li>
+      <li class="pull-right" id="songsButton"><a ng-href="{{ToggleSongsRef}}"><i class="fa {{ButtonIcon}}"></i></a></li>
     </ul>
   </nav>
   <div id="main-page">
     <div ng-view></div>
   </div>
   <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/fastclick.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
       app.initialize();

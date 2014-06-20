@@ -37,6 +37,9 @@ var app = {
   // function, we must explicitly call 'app.receivedEvent(...);'
   onDeviceReady: function() {
     console.log('Device is ready');
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
   },
   // Rec Button pressed eventHandler
   //

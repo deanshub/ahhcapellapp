@@ -61,7 +61,10 @@ body {
   padding: 0;
 }
 
-#songsButton a:hover {}
+#songsButton a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
 
 #nav-items {
   flex: 1;
