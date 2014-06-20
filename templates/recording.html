@@ -1,8 +1,10 @@
 <html>
 <head>
   <style>
+		@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
 		html, body {
-			font-family: Arial;
+			font-family: 'Open Sans Hebrew', Arial;
 		}
 
     #people {
@@ -47,6 +49,7 @@
 
     #floating-exclamation {
       position: absolute;
+			font-weight: 100;
       display: flex;
       color: #f7f7f7;
       font-size: 5em;
@@ -58,9 +61,11 @@
 
 		#floating-exclamation > span {
 			display: block;
-			background-color: red;
+			background-color: rgba(200, 20, 20, 0.7);
 			padding: 0.1em;
-			border-radius: 0.5em;
+			border-radius: 0.5em 0.1em;
+			text-shadow: -1px -1px rgba(150, 20, 20, 1);
+			box-shadow: inset 1px 1px 2px rgba(150, 20, 20, 1);
 		}
 
 		.inline {
@@ -68,17 +73,44 @@
 		}
 
 		#people:hover > .images {
-			-webkit-animation: rotate 5s linear;
+			-webkit-animation: rotate 5s infinite linear;
 			border-radius: 100%;
 		}
 
 		@-webkit-keyframes rotate {
-	    from {-webkit-transform: rotate(0deg), scale(1); border-radius: 100%; }
-	    to {-webkit-transform: rotate(360deg) scale(1); border-radius: 100%; }
+	    from {
+				/*-webkit-transform: rotate(0deg), scale(1);*/
+				border-radius: 100%;
+				left: 100px;
+			}
+	    to {
+				/*-webkit-transform: rotate(360deg) scale(1);*/
+				border-radius: 100%;
+				left: 200px;
+			}
+		}
+
+		.logo {
+			font-family: 'Open Sans Hebrew';
+			display: block;
+			font-size: 3em;
+		}
+
+		.logo::before {
+			content: 'Ha';
+			color: #ff4747;
+			font-weight: 400;
+		}
+
+		.logo::after {
+			content: 'loaa';
+			font-weight: 100;
 		}
   </style>
 </head>
 <body>
+	<span class="logo"></span>
+
 	<div id="people" class="four inline">
 		<span id="floating-exclamation"><span>REC</span></span>
 		<div class="images">
@@ -97,7 +129,7 @@
 			<div style="background-image: url(kfir.jpg)"></div>
 		</div>
 	</div>
-
+<br />
 	<div id="people" class="two inline">
 		<span id="floating-exclamation"><span>REC</span></span>
 		<div class="images">
