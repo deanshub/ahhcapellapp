@@ -1,0 +1,25 @@
+{
+  "name": "haloaa-server",
+  "version": "0.0.0",
+  "description": "Haloaa server side logic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deanshub/haloaa"
+  },
+  "keywords": [
+    "Haloaa",
+    "Acapella",
+    "App",
+    "Server"
+  ],
+  "author": "Gal Schlezinger <gal@spitfire.co.il> (https://github.com/Schniz)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deanshub/haloaa/issues"
+  },
+  "homepage": "https://github.com/deanshub/haloaa"
+}
