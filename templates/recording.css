@@ -19,7 +19,7 @@
   float: left;
   width: 50%;
   height: 50%;
-  background-size: 100% 100%;
+  background-size: 100vh;
   background-position: center center;
 }
 
