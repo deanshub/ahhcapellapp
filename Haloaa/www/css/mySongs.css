@@ -1,16 +1,22 @@
+#song-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
 #song-list {
   list-style: none;
   margin: 0;
   padding: 0;
-
   width: 100%;
+  background-image: url('../img/bigchoir.jpg');
+  background-size: auto;
 }
 
 #song-list > li {
   color: #f7f7f7;
   font-weight: 100;
   background-color: rgba(87, 53, 53, 0.95);
-  font-size: 2em;
+  font-size: 1.6em;
   padding: 0.5em;
 }
 

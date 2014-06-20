@@ -89,6 +89,7 @@ body {
 #main-page {
   flex: 1;
   display: flex;
+  padding-top: 20px;
 }
 
 .center {

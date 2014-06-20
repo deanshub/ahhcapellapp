@@ -19,8 +19,12 @@ haloaaApp.config(function($routeProvider) {
 
 haloaaApp.controller('mainController', function($scope) {
   console.log("in main controller");
+  $scope.ToggleSongsRef = '#songs';
+  $scope.ButtonIcon = "fa-music";
 });
 
 haloaaApp.controller('songsController', function($scope) {
   console.log("SONGS SONGS");
+  $scope.ToggleSongsRef = '#';
+  $scope.ButtonIcon = "fa-music";
 });

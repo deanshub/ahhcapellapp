@@ -30,12 +30,6 @@ var app = {
   // 'load', 'deviceready', 'offline', and 'online'.
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
-    
-    // Bind the buttons
-    document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
-    document.getElementById('logo').addEventListener('click', this.onLogoClick, false);
-    document.getElementById('songsButton').addEventListener('click', this.onSongsButtonClick, false);
-    
   },
   // deviceready Event Handler
   //
@@ -61,6 +55,11 @@ var app = {
   // Show the songs menu
   onSongsButtonClick: function() {
     console.log('Showing songs...');
+    
+    var btn = document.getElementById('songsButton')
+    
+    btn.href == '#songs' ? btn.href = '#' : btn.hasAttribute = '#songs';
+    
 //    if (WinState == 'main') {
 //      window.location="/songs";
 //      WinState = 'songs';
