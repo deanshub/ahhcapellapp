@@ -17,6 +17,9 @@
  * under the License.
  */
 var app = {
+  
+  WinState : 'main',
+   
   // Application Constructor
   initialize: function() {
       this.bindEvents();
@@ -27,11 +30,6 @@ var app = {
   // 'load', 'deviceready', 'offline', and 'online'.
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
-    
-    // Bind the buttons
-    document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
-    document.getElementById('logo').addEventListener('click', this.onLogoClick, false);
-    
   },
   // deviceready Event Handler
   //
@@ -39,20 +37,39 @@ var app = {
   // function, we must explicitly call 'app.receivedEvent(...);'
   onDeviceReady: function() {
     console.log('Device is ready');
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
   },
   // Rec Button pressed eventHandler
   //
   // What happened when the button is pushed
   onRecButtonClick: function() {
     console.log('RecButton pressed.');
-    
-    // Start a recording!
-    navigator.notification.alert('Red button pressed', function() {}, 'Button :O', 'OK');
   },
   // Logo pressed
   //
   onLogoClick: function() {
     // Do something for logo
     navigator.notification.alert('Pressed logo', function () {}, 'Logo', 'Yeah!');
+  },
+  // Song button pressed
+  //
+  // Show the songs menu
+  onSongsButtonClick: function() {
+    console.log('Showing songs...');
+    
+    var btn = document.getElementById('songsButton')
+    
+    btn.href == '#songs' ? btn.href = '#' : btn.hasAttribute = '#songs';
+    
+//    if (WinState == 'main') {
+//      window.location="/songs";
+//      WinState = 'songs';
+//    }
+//    else {
+//      window.location="/";
+//      WinState = 'main';
+//    }
   }
 };

@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.haloaaapp.haloaa" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Haloaa!</name>
-    <description>
-        Sing together, Create friendships. Enjoy.
-    </description>
-    <author email="mail@gmail.com" href="http://www.hackathon.io/ahhcapellapp">
-        Haloaa! Team.
-    </author>
-    <content src="HaloaaMain.html" />
-    <access origin="*" />
+  <name>Haloaa!</name>
+  <description>
+      Sing together, Create friendships. Enjoy.
+  </description>
+  <author email="mail@gmail.com" href="http://www.hackathon.io/ahhcapellapp">
+      Haloaa! Team.
+  </author>
+  <content src="Haloaa.html" />
+  <access origin="*" />
+  <icon src="res/icon.png" />
 </widget>
