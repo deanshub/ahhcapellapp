@@ -26,6 +26,7 @@
     "express": "^4.4.3",
     "mongoose": "^3.8.12",
     "passport": "^0.2.0",
+    "passport-facebook": "^1.0.3",
     "simpleplan": "0.0.1"
   }
 }
