@@ -17,6 +17,9 @@
  * under the License.
  */
 var app = {
+  
+  WinState : 'main',
+   
   // Application Constructor
   initialize: function() {
       this.bindEvents();
@@ -58,5 +61,13 @@ var app = {
   // Show the songs menu
   onSongsButtonClick: function() {
     console.log('Showing songs...');
+//    if (WinState == 'main') {
+//      window.location="/songs";
+//      WinState = 'songs';
+//    }
+//    else {
+//      window.location="/";
+//      WinState = 'main';
+//    }
   }
 };

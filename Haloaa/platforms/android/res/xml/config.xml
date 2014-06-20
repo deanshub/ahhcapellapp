@@ -34,6 +34,6 @@
     <author email="mail@gmail.com" href="http://www.hackathon.io/ahhcapellapp">
         Haloaa! Team.
     </author>
-    <content src="HaloaaMain.html" />
+    <content src="Haloaa.html" />
     <access origin="*" />
 </widget>
