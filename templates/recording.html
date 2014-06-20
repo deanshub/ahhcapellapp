@@ -1,15 +1,32 @@
 <html>
 <head>
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
   <style>
 		@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 
 		html, body {
 			font-family: 'Open Sans Hebrew', Arial;
+			margin: 0;
+		}
+
+		html {
+			background-image: url('bigchoir.jpg');
+			background-size: 100% 100%;
+		}
+
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
 		}
 
     .people {
-      width: 500px;
-			height: 500px;
+      max-height: 95vw;
+			max-width: 95vw;
+
+			width: 600px;
+			height: 600px;
       overflow: hidden;
       border-radius: 100%;
       position: relative;
@@ -75,55 +92,93 @@
 		.logo {
 			font-family: 'Open Sans Hebrew';
 			display: block;
-			font-size: 3em;
 		}
 
-		.logo::before {
-			content: 'Ha';
+		.logo > .ha {
 			color: #ff4747;
 			font-weight: 400;
 		}
 
-		.logo::after {
-			content: 'loaa';
+		.logo > .loaa {
+		}
+
+		.logo > .exclamation {
+			color: #ff4747;
+			cont-weight: 100;
+		}
+
+		#nav-bar {
 			font-weight: 100;
+			font-size: 3em;
+			color: #f7f7f7;
+			display: flex;
+			width: 100%;
+		}
+
+		#nav-items, #nav-items > li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#nav-items {
+			flex: 1;
+			display: flex;
+			margin-left: .5em;
+		}
+
+		#nav-items > li > a, .logo {
+			display: block;
+			padding: 0.3em 0.5em;
+		}
+
+		#nav-items > li {
+			display: block;
+		}
+
+		.pull-left {
+			float: left;
+		}
+
+		.pull-right {
+			float: right;
+			text-align: right;
+			flex: 1;
+		}
+
+		#nav-bar .fa {
+			line-height: 1.5em !important;
+		}
+
+		#main-page {
+			flex: 1;
+			display: flex;
+		}
+
+		.center {
+			margin: auto;
 		}
   </style>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
 </head>
 <body>
-	<span class="logo"></span>
-
-	<div id="people" class="four people inline">
-		<span id="floating-exclamation"><span>REC</span></span>
-		<div class="images">
-			<div style="background-image: url(gal.jpg)"></div>
-			<div style="background-image: url(dean.jpg)"></div>
-			<div style="background-image: url(kfir.jpg)"></div>
-			<div style="background-image: url(yaniv.jpg)"></div>
-		</div>
-	</div>
-
-	<div id="people" class="three people inline">
-		<span id="floating-exclamation"><span>REC</span></span>
-		<div class="images">
-			<div style="background-image: url(gal.jpg)"></div>
-			<div style="background-image: url(dean.jpg)"></div>
-			<div style="background-image: url(kfir.jpg)"></div>
-		</div>
-	</div>
-<br />
-	<div id="people" class="two people inline">
-		<span id="floating-exclamation"><span>REC</span></span>
-		<div class="images">
-			<div style="background-image: url(gal.jpg)"></div>
-			<div style="background-image: url(dean.jpg)"></div>
-		</div>
-	</div>
-
-	<div id="people" class="one people inline">
-		<span id="floating-exclamation"><span>REC</span></span>
-		<div class="images">
-			<div style="background-image: url(gal.jpg)"></div>
+	<nav id="nav-bar">
+		<span class="logo"><span class="ha">Ha</span><span class="loaa">loaa</span><span class="exclamation">!</span></span>
+		<ul id="nav-items">
+			<!-- <li><a>Old Friends</a></li>
+			<li><a>New Friends</a></li> -->
+			<li class="pull-right"><a><i class="fa fa-bars"></i></a></li>
+		</ul>
+	</nav>
+	<div id="main-page">
+		<div id="people" class="four people center">
+			<span id="floating-exclamation"><span>REC</span></span>
+			<div class="images">
+				<div style="background-image: url(gal.jpg)"></div>
+				<div style="background-image: url(dean.jpg)"></div>
+				<div style="background-image: url(kfir.jpg)"></div>
+				<div style="background-image: url(yaniv.jpg)"></div>
+			</div>
 		</div>
 	</div>
 </body>
