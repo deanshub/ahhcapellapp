@@ -2,3 +2,6 @@
 /Haloaa/platforms/android/CordovaLib
 /Haloaa/platforms/android/ant-gen/
 /Haloaa/platforms/android/ant-build/
+
+# Server
+/server/node_modules
