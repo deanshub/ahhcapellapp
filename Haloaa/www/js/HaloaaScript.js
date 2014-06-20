@@ -17,14 +17,14 @@ haloaaApp.config(function($routeProvider) {
     });
 });
 
-haloaaApp.controller('mainController', function($scope) {
+haloaaApp.controller('mainController', function($scope, $rootScope) {
   console.log("in main controller");
-  $scope.ToggleSongsRef = '#songs';
+  $rootScope.ToggleSongsRef = '#/songs';
   $scope.ButtonIcon = "fa-music";
 });
 
-haloaaApp.controller('songsController', function($scope) {
+haloaaApp.controller('songsController', function($scope, $rootScope) {
   console.log("SONGS SONGS");
-  $scope.ToggleSongsRef = '#';
-  $scope.ButtonIcon = "fa-music";
+  $rootScope.ToggleSongsRef = '#';
+  $rootScope.ButtonIcon = "fa-music";
 });

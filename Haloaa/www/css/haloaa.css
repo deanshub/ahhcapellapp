@@ -28,6 +28,10 @@ body {
 .logo {
   font-family: 'Open Sans Hebrew';
   display: block;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
 }
 
 .logo > .ha {
@@ -89,7 +93,7 @@ body {
 #main-page {
   flex: 1;
   display: flex;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .center {
