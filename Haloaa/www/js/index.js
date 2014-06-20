@@ -53,5 +53,6 @@ var app = {
   //
   onLogoClick: function() {
     // Do something for logo
+    navigator.notification.alert('Pressed logo', function () {}, 'Logo', 'Yeah!');
   }
 };
