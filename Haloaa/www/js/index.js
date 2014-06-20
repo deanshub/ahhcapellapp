@@ -26,15 +26,19 @@ var app = {
   // Bind any events that are required on startup. Common events are:
   // 'load', 'deviceready', 'offline', and 'online'.
   bindEvents: function() {
-      document.addEventListener('deviceready', this.onDeviceReady, false);
-      document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+    
+    // Bind the buttons
+    document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
+    document.getElementById('logo').addEventListener('click', this.onLogoClick, false);
+    
   },
   // deviceready Event Handler
   //
   // The scope of 'this' is the event. In order to call the 'receivedEvent'
   // function, we must explicitly call 'app.receivedEvent(...);'
   onDeviceReady: function() {
-      console.log('Device is ready');
+    console.log('Device is ready');
   },
   // Rec Button pressed eventHandler
   //
@@ -44,5 +48,10 @@ var app = {
     
     // Start a recording!
     navigator.notification.alert('Red button pressed', function() {}, 'Button :O', 'OK');
+  },
+  // Logo pressed
+  //
+  onLogoClick: function() {
+    // Do something for logo
   }
 };
