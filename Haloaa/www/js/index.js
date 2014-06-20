@@ -31,6 +31,7 @@ var app = {
     // Bind the buttons
     document.getElementById('people').addEventListener('click', this.onRecButtonClick, false);
     document.getElementById('logo').addEventListener('click', this.onLogoClick, false);
+    document.getElementById('songsButton').addEventListener('click', this.onSongsButtonClick, false);
     
   },
   // deviceready Event Handler
@@ -54,5 +55,7 @@ var app = {
   onLogoClick: function() {
     // Do something for logo
     navigator.notification.alert('Pressed logo', function () {}, 'Logo', 'Yeah!');
+  },
+  onSongsButtonClick: function() {
   }
 };
