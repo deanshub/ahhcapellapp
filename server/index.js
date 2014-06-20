@@ -11,6 +11,7 @@ Mongoose.connect('mongodb://localhost/haloaa_test');
 
 
 require('./models/User')(deps);
+require('./models/Song')(deps);
 
 app.use(express.static('public'));
 app.use(cookieParser());
