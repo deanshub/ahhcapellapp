@@ -7,6 +7,7 @@ var Mongoose         = deps.Mongoose         = require('mongoose');
 var bodyParser       = deps.bodyParser       = require('body-parser');
 var cookieParser     = deps.cookieParser     = require('cookie-parser');
 var session          = deps.session          = require('express-session');
+var baucis           = deps.baucis           = require('baucis');
 Mongoose.connect('mongodb://localhost/haloaa_test');
 
 
@@ -22,6 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(deps);
+require('./controllers/api')(deps);
 
 app.get('/', function(req, res) {
   res.status(200).send("hai");
