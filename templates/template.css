@@ -5,6 +5,11 @@ html, body {
   margin: 0;
 }
 
+a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
 html {
   background-image: url('bigchoir.jpg');
   background-size: 100% 100%;
