@@ -41,6 +41,8 @@ var app = {
   // What happened when the button is pushed
   onRecButtonClick: function() {
     console.log('RecButton pressed.');
+    
+    // Start a recording!
     navigator.notification.alert('Red button pressed', function() {}, 'Button :O', 'OK');
   }
 };
