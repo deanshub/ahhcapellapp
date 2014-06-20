@@ -1,0 +1,116 @@
+<html>
+<head>
+  <style>
+		html, body {
+			font-family: Arial;
+		}
+
+    #people {
+      width: 500px;
+			height: 500px;
+      overflow: hidden;
+      border-radius: 100%;
+      position: relative;
+    }
+
+		#people > .images {
+			width: 100%;
+			height: 100%;
+		}
+
+		#people > .images > div {
+			display: block;
+			float: left;
+      width: 50%;
+			height: 50%;
+			background-size: 100% 100%;
+			background-position: center center;
+		}
+
+		#people.three > .images > div:nth-of-type(1),
+		#people.two > .images > div:nth-of-type(1),
+		#people.two > .images > div:nth-of-type(2) {
+			height: 100%;
+			-webkit-transform: scaleX(1.9);
+			position: relative;
+			z-index: -1;
+		}
+
+		#people.one > .images > div {
+			height: 100%;
+			width: 100%;
+		}
+
+		#people.two > .images > div:nth-of-type(2) {
+			left: 22%;
+		}
+
+    #floating-exclamation {
+      position: absolute;
+      display: flex;
+      color: #f7f7f7;
+      font-size: 5em;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+		#floating-exclamation > span {
+			display: block;
+			background-color: red;
+			padding: 0.1em;
+			border-radius: 0.5em;
+		}
+
+		.inline {
+			display: inline-block;
+		}
+
+		#people:hover > .images {
+			-webkit-animation: rotate 5s linear;
+			border-radius: 100%;
+		}
+
+		@-webkit-keyframes rotate {
+	    from {-webkit-transform: rotate(0deg), scale(1); border-radius: 100%; }
+	    to {-webkit-transform: rotate(360deg) scale(1); border-radius: 100%; }
+		}
+  </style>
+</head>
+<body>
+	<div id="people" class="four inline">
+		<span id="floating-exclamation"><span>REC</span></span>
+		<div class="images">
+			<div style="background-image: url(gal.jpg)"></div>
+			<div style="background-image: url(dean.jpg)"></div>
+			<div style="background-image: url(kfir.jpg)"></div>
+			<div style="background-image: url(yaniv.jpg)"></div>
+		</div>
+	</div>
+
+	<div id="people" class="three inline">
+		<span id="floating-exclamation"><span>REC</span></span>
+		<div class="images">
+			<div style="background-image: url(gal.jpg)"></div>
+			<div style="background-image: url(dean.jpg)"></div>
+			<div style="background-image: url(kfir.jpg)"></div>
+		</div>
+	</div>
+
+	<div id="people" class="two inline">
+		<span id="floating-exclamation"><span>REC</span></span>
+		<div class="images">
+			<div style="background-image: url(gal.jpg)"></div>
+			<div style="background-image: url(dean.jpg)"></div>
+		</div>
+	</div>
+
+	<div id="people" class="one inline">
+		<span id="floating-exclamation"><span>REC</span></span>
+		<div class="images">
+			<div style="background-image: url(gal.jpg)"></div>
+		</div>
+	</div>
+</body>
+</html>
