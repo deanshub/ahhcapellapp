@@ -46,9 +46,6 @@ var app = {
   // What happened when the button is pushed
   onRecButtonClick: function() {
     console.log('RecButton pressed.');
-    
-    // Start a recording!
-    navigator.notification.alert('Red button pressed', function() {}, 'Button :O', 'OK');
   },
   // Logo pressed
   //
@@ -56,6 +53,10 @@ var app = {
     // Do something for logo
     navigator.notification.alert('Pressed logo', function () {}, 'Logo', 'Yeah!');
   },
+  // Song button pressed
+  //
+  // Show the songs menu
   onSongsButtonClick: function() {
+    console.log('Showing songs...');
   }
 };
