@@ -29,11 +29,11 @@
     </feature>
     <name>Haloaa!</name>
     <description>
-        Sing together, Create friendships. Enjoy.
-    </description>
+      Sing together, Create friendships. Enjoy.
+  </description>
     <author email="mail@gmail.com" href="http://www.hackathon.io/ahhcapellapp">
-        Haloaa! Team.
-    </author>
+      Haloaa! Team.
+  </author>
     <content src="Haloaa.html" />
     <access origin="*" />
     <icon src="res/icon.png" />
