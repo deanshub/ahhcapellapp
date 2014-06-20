@@ -61,6 +61,8 @@ body {
   padding: 0;
 }
 
+#songsButton a:hover {}
+
 #nav-items {
   flex: 1;
   display: flex;
