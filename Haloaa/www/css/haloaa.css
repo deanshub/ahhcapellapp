@@ -12,7 +12,7 @@ a {
 
 html {
   background-image: url('../img/bigchoir.jpg');
-  background-size: 100vh;
+  background-size: cover;
 }
 
 body {
@@ -28,9 +28,9 @@ body {
 .logo {
   font-family: 'Open Sans Hebrew';
   display: block;
-  -webkit-user-select: none;  
-  -moz-user-select: none;    
-  -ms-user-select: none;      
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
