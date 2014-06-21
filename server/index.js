@@ -16,8 +16,8 @@ require('./models/Song')(deps);
 
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '50mb' }));
+// app.use(bodyParser.json({ limit: '50mb' }));
 app.use(session({ secret: 'haminados' }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -31,6 +31,19 @@ app.get('/', function(req, res) {
 
 app.get('/login', function(req, res) {
   res.send("You must <a href='/auth/facebook'>Login via Facebook</a>");
+});
+
+app.post('/upload', function(req, res) {
+  if (!req.isAuthenticated()) { return next('not authenticated!') };
+
+  var song = new Mongoose.models.Song({
+    participants: [req.user._id],
+    data: req.body.data
+  });
+
+  song.save(function() {
+    res.send('wat');
+  });
 });
 
 var host = process.env.HOST || 'localhost';
